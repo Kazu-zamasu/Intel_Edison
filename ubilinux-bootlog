@@ -1,0 +1,128 @@
+******************************
+PSH KERNEL VERSION: b0182727
+                WR: 20104000
+******************************
+
+SCU IPC: 0x800000d0  0xfffce92c
+
+PSH miaHOB version: TNG.B0.VVBD.0000000c
+
+microkernel built 23:15:13 Apr 24 2014
+
+******* PSH loader *******
+PCM page cache size = 192 KB 
+Cache Constraint = 0 Pages
+Arming IPC driver ..
+Adding page store pool ..
+PagestoreAddr(IMR Start Address) = 0x04899000
+pageStoreSize(IMR Size)          = 0x00080000
+
+*** Ready to receive application *** 
+
+
+U-Boot 2014.04 (Oct 12 2014 - 15:29:52)
+
+       Watchdog enabled
+DRAM:  980.6 MiB
+MMC:   tangier_sdhci: 0
+In:    serial
+Out:   serial
+Err:   serial
+Hit any key to stop autoboot:  0 
+Target:blank
+Partitioning already done...
+Flashing already done...
+GADGET DRIVER: usb_dnl_dfu
+reading vmlinuz
+5129696 bytes read in 128 ms (38.2 MiB/s)
+Valid Boot Flag
+Setup Size = 0x00003c00
+Magic signature found
+Using boot protocol version 2.0c
+Linux kernel version 3.10.17-poky-edison-ww42+ (dave@animal) #4 SMP PREEMPT Wed Oct 29 12:41:25 GMT 2014
+Building boot_params at 0x00090000
+Loading bzImage at address 00100000 (5114336 bytes)
+Magic signature found
+Kernel command line: "root=PARTUUID=012b3303-34ac-284d-99b4-34e03a2335f4 rootfstype=ext4 console=ttyMFD2 earlyprintk="
+
+Starting kernel ...
+
+[    0.768869] pca953x 1-0020: failed reading register
+[    0.774063] pca953x 1-0021: failed reading register
+[    0.774441] pca953x 1-0022: failed reading register
+[    0.784337] pca953x 1-0023: failed reading register
+[    1.628186] pmic_ccsm pmic_ccsm: Error reading battery profile from battid frmwrk
+[    1.636682] pmic_ccsm pmic_ccsm: Battery Over heat exception
+[    1.639476] pmic_ccsm pmic_ccsm: Battery0 temperature outside boundary
+SELinux:  Could not open policy file <= /etc/selinux/targeted/policy/policy.28:  No such file or directory
+INIT: version 2.88 booting
+[info] Using makefile-style concurrent boot in runlevel S.
+[....] Starting the hotplug events dispatcher: udevd. ok 
+[....] Synthesizing the initial hotplug events...done.
+[....] Waiting for /dev to be fully populated...done.
+[....] Activating swap...done.
+mount: / not mounted or bad option
+rm: cannot remove `/tmp/.clean': Read-only file system
+[....] Cleaning up temporary files.... ok 
+[info] Loading kernel module bcm_bt_lpm.
+[info] Loading kernel module bcm4334x.
+[info] Loading kernel module g_multi.
+[....] Activating lvm and md swap...done.
+[....] Checking file systems...fsck from util-linux 2.20.1
+dosfsck 3.0.13, 30 Jun 2012, FAT32, LFN
+/dev/mmcblk0p7: 4 files, 2593/51091 clusters
+/dev/mmcblk0p10: clean, 12/84480 files, 14005/337915 blocks
+[    8.112773] dwc3-device dwc3-device.1: request f54d12a0 was not queued to ep6in-bulk
+[    8.112870] dwc3-device dwc3-device.1: request f54d1c00 was not queued to ep6in-bulk
+done.
+[    8.325816] dwc3-device dwc3-device.1: request f5490420 was not queued to ep6in-bulk
+[    8.325918] dwc3-device dwc3-device.1: request f5490300 was not queued to ep6in-bulk
+[....] Mounting local filesystems...mount: mount point /var/volatile does not exist
+failed.
+[....] Activating swapfile swap...done.
+[    9.056666] dwc3-device dwc3-device.1: request f5e3ec60 was not queued to ep6in-bulk
+[    9.056768] dwc3-device dwc3-device.1: request f5e3e6c0 was not queued to ep6in-bulk
+[....] Cleaning up temporary files.... ok 
+[....] Setting kernel variables ...done.
+[....] Configuring network interfaces...Internet Systems Consortium DHCP Client 4.2.2
+Copyright 2004-2011 Internet Systems Consortium.
+All rights reserved.
+For info, please visit https://www.isc.org/software/dhcp/
+
+can't create /var/lib/dhcp/dhclient.wlan0.leases: Read-only file system
+Listening on LPF/wlan0/fc:c2:de:45:72:9a
+Sending on   LPF/wlan0/fc:c2:de:45:72:9a
+Sending on   Socket/fallback
+DHCPREQUEST on wlan0 to 255.255.255.255 port 67
+DHCPDISCOVER on wlan0 to 255.255.255.255 port 67 interval 7
+DHCPREQUEST on wlan0 to 255.255.255.255 port 67
+DHCPOFFER from 192.168.2.1
+DHCPACK from 192.168.2.1
+/sbin/dhclient-script: line 26: /etc/resolv.conf.dhclient-new: Read-only file system
+/sbin/dhclient-script: line 44: /etc/resolv.conf.dhclient-new: Read-only file system
+/sbin/dhclient-script: line 49: /etc/resolv.conf.dhclient-new: Read-only file system
+chown: cannot access `/etc/resolv.conf.dhclient-new': No such file or directory
+chmod: cannot access `/etc/resolv.conf.dhclient-new': No such file or directory
+mv: cannot stat `/etc/resolv.conf.dhclient-new': No such file or directory
+can't create /var/lib/dhcp/dhclient.wlan0.leases: Read-only file system
+bound to 192.168.2.104 -- renewal in 586328 seconds.
+done.
+[....] Cleaning up temporary files.... ok 
+INIT: Entering runlevel: 2
+[info] Using makefile-style concurrent boot in runlevel 2.
+savelog: directory /var/log/ is not writable
+/etc/init.d/bootlogs: 23: /etc/init.d/bootlogs: cannot create /var/log/dmesg: Read-only file system
+chgrp: changing group of `/var/log/dmesg': Read-only file system
+[....] Starting enhanced syslogd: rsyslogd. ok 
+[....] Starting NTP server: ntpd. ok 
+[....] Starting system message bus: dbus. ok 
+[....] Starting periodic command scheduler: cron. ok 
+[....] Starting OpenBSD Secure Shell server: sshd. ok 
+Starting very small Busybox based DHCP server: Starting /usr/sbin/udhcpd...
+udhcpd.
+Starting galileod
+[   19.607235] intel_scu_watchdog_evo: watchdog_stop
+
+Debian GNU/Linux 7 ubilinux ttyMFD2
+
+ubilinux login: 
