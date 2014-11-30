@@ -1,3 +1,3 @@
 Intel_Edison
 ============
-Intel Edisonに関するいろいろ
+Intel Edison my memorundum.
